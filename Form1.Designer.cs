@@ -499,7 +499,7 @@
             this.Controls.Add(this.pb3);
             this.Controls.Add(this.pb1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Memory Game";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

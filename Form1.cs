@@ -161,7 +161,7 @@ namespace MemoryGame
         {
             if (
             MessageBox.Show(
-                "Game Over!", "Time's Up!",
+                "Better Luck Next Time", "Time's Up!",
                 MessageBoxButtons.OK,
                 icon: MessageBoxIcon.Information
             ) == DialogResult.OK)
