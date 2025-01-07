@@ -17,8 +17,7 @@ MemoryGame is a classic .NET Windows Forms game where players match pairs of ide
 
 ## Live Demo 🔗
 Try out the game by downloading it using the link below:  
-[Download MemoryGame]([https://example.com/download](https://drive.google.com/file/d/1b29uDuo0wKCpHQUQk_yIOex46IyIjW8W/view?usp=drive_link))  
-*(Replace the above link with your actual download link.)*
+[Download MemoryGame](https://drive.google.com/file/d/1b29uDuo0wKCpHQUQk_yIOex46IyIjW8W/view?usp=drive_link)  
 
 ## Requirements 🛠️
 - **.NET Framework**: Version 4.7.2 or higher  
@@ -27,7 +26,7 @@ Try out the game by downloading it using the link below:
 ## Installation 🖥️
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/MemoryGame.git
+   git clone https://github.com/MarwanDev/MemoryGame.git
 
 ## Screenshots 🖼️
 Take a look at the game in action:  
@@ -44,7 +43,6 @@ Take a look at the game in action:
 ### Animals  
 ![Show Pictures](Screenshots/Animals.JPG)  
 
-*(Replace the image paths above with your actual screenshot file paths in the repository.)*
 
 ## Contributing 🤝
 Contributions are welcome! Here's how you can help:  
@@ -58,4 +56,3 @@ Feel free to open issues for bugs, suggestions, or enhancements.
 
 ## License 📜
 This project is licensed under the [MIT License](LICENSE).  
-You are free to use, modify, and distribute this project under the terms of the license.
