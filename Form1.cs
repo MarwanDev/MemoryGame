@@ -1,16 +1,9 @@
 ﻿using MemoryGame.Properties;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Timers;
 using System.Windows.Forms;
-using static MemoryGame.clsGame;
 
 namespace MemoryGame
 {
@@ -31,7 +24,7 @@ namespace MemoryGame
             cbPicSet.Text = "Animals";
         }
 
-        enum enMode { Light, Dark };
+        enum Mode { Light, Dark };
 
         private void InitiateGame()
         {
@@ -52,44 +45,46 @@ namespace MemoryGame
             InitiateGame();
         }
 
-        private void ChangeMode(enMode mode)
+        private void ChangeMode(Mode mode)
         {
-            this.BackColor = mode == enMode.Light ? Color.White : Color.Black;
+            this.BackColor = mode == Mode.Light ? Color.White : Color.Black;
             foreach (PictureBox pictureBox in pictureBoxes)
             {
-                pictureBox.BackColor = mode == enMode.Light ? this.BackColor : Color.Gray;
+                pictureBox.BackColor = mode == Mode.Light ? this.BackColor : Color.Gray;
             }
         }
 
-        private void rdCheckedChanged(object sender, EventArgs e)
+        private void RdCheckedChanged(object sender, EventArgs e)
         {
             if (((RadioButton)(sender)).Enabled == true)
             {
                 if (rdLight.Checked)
-                    ChangeMode(enMode.Light);
+                    ChangeMode(Mode.Light);
                 else
-                    ChangeMode(enMode.Dark);
+                    ChangeMode(Mode.Dark);
             }
         }
 
         private void FillPictureBoxes()
         {
-            pictureBoxes = new List<PictureBox>();
-            pictureBoxes.Add(pb1);
-            pictureBoxes.Add(pb2);
-            pictureBoxes.Add(pb3);
-            pictureBoxes.Add(pb4);
-            pictureBoxes.Add(pb5);
-            pictureBoxes.Add(pb6);
-            pictureBoxes.Add(pb7);
-            pictureBoxes.Add(pb8);
-            pictureBoxes.Add(pb9);
-            pictureBoxes.Add(pb10);
-            pictureBoxes.Add(pb11);
-            pictureBoxes.Add(pb12);
+            pictureBoxes = new List<PictureBox>
+            {
+                pb1,
+                pb2,
+                pb3,
+                pb4,
+                pb5,
+                pb6,
+                pb7,
+                pb8,
+                pb9,
+                pb10,
+                pb11,
+                pb12
+            };
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             timer1.Interval = interval;
             int minutes = totalTimeInSeconds / 60;
@@ -111,13 +106,13 @@ namespace MemoryGame
                 speed == 1.5 ? 750 : 500;
         }
 
-        private void cbSpeed_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbSpeed_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbSpeed.Enabled == true)
                 ChangeSpeed();
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void BtnStart_Click(object sender, EventArgs e)
         {
             if (btnStart.Enabled == true)
             {
@@ -132,7 +127,7 @@ namespace MemoryGame
             }
         }
 
-        private void cbPicSet_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbPicSet_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbPicSet.Enabled == true)
             {
@@ -242,7 +237,7 @@ namespace MemoryGame
             lblScore.Refresh();
         }
 
-        private void pb_Click(object sender, EventArgs e)
+        private void Pb_Click(object sender, EventArgs e)
         {
             if (((PictureBox)(sender)).Enabled == true)
             {
@@ -250,7 +245,7 @@ namespace MemoryGame
             }
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void BtnReset_Click(object sender, EventArgs e)
         {
             foreach (PictureBox pictureBox in pictureBoxes)
             {
@@ -272,7 +267,7 @@ namespace MemoryGame
             ChangeTime();
         }
 
-        private void btnShowPictures_Click(object sender, EventArgs e)
+        private void BtnShowPictures_Click(object sender, EventArgs e)
         {
             if (btnShowPictures.Enabled == true)
             {
@@ -292,7 +287,7 @@ namespace MemoryGame
             totalTimeInSeconds = Int32.Parse(cbTimer.Text) * 60;
         }
 
-        private void cbTimer_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbTimer_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbTimer.Enabled == true)
             {

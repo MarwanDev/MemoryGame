@@ -138,7 +138,7 @@
             this.cbPicSet.Name = "cbPicSet";
             this.cbPicSet.Size = new System.Drawing.Size(134, 33);
             this.cbPicSet.TabIndex = 14;
-            this.cbPicSet.SelectedIndexChanged += new System.EventHandler(this.cbPicSet_SelectedIndexChanged);
+            this.cbPicSet.SelectedIndexChanged += new System.EventHandler(this.CbPicSet_SelectedIndexChanged);
             // 
             // pbScore
             // 
@@ -231,7 +231,7 @@
             this.cbSpeed.Name = "cbSpeed";
             this.cbSpeed.Size = new System.Drawing.Size(81, 33);
             this.cbSpeed.TabIndex = 4;
-            this.cbSpeed.SelectedIndexChanged += new System.EventHandler(this.cbSpeed_SelectedIndexChanged);
+            this.cbSpeed.SelectedIndexChanged += new System.EventHandler(this.CbSpeed_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -257,7 +257,7 @@
             this.cbTimer.Name = "cbTimer";
             this.cbTimer.Size = new System.Drawing.Size(81, 33);
             this.cbTimer.TabIndex = 2;
-            this.cbTimer.SelectedIndexChanged += new System.EventHandler(this.cbTimer_SelectedIndexChanged);
+            this.cbTimer.SelectedIndexChanged += new System.EventHandler(this.CbTimer_SelectedIndexChanged);
             // 
             // rdDark
             // 
@@ -271,7 +271,7 @@
             this.rdDark.TabStop = true;
             this.rdDark.Text = "Dark Mode";
             this.rdDark.UseVisualStyleBackColor = true;
-            this.rdDark.CheckedChanged += new System.EventHandler(this.rdCheckedChanged);
+            this.rdDark.CheckedChanged += new System.EventHandler(this.RdCheckedChanged);
             // 
             // rdLight
             // 
@@ -285,7 +285,7 @@
             this.rdLight.TabStop = true;
             this.rdLight.Text = "Light Mode";
             this.rdLight.UseVisualStyleBackColor = true;
-            this.rdLight.CheckedChanged += new System.EventHandler(this.rdCheckedChanged);
+            this.rdLight.CheckedChanged += new System.EventHandler(this.RdCheckedChanged);
             // 
             // pb12
             // 
@@ -297,7 +297,7 @@
             this.pb12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb12.TabIndex = 11;
             this.pb12.TabStop = false;
-            this.pb12.Click += new System.EventHandler(this.pb_Click);
+            this.pb12.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb10
             // 
@@ -309,7 +309,7 @@
             this.pb10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb10.TabIndex = 10;
             this.pb10.TabStop = false;
-            this.pb10.Click += new System.EventHandler(this.pb_Click);
+            this.pb10.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb11
             // 
@@ -321,7 +321,7 @@
             this.pb11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb11.TabIndex = 9;
             this.pb11.TabStop = false;
-            this.pb11.Click += new System.EventHandler(this.pb_Click);
+            this.pb11.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb9
             // 
@@ -333,7 +333,7 @@
             this.pb9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb9.TabIndex = 8;
             this.pb9.TabStop = false;
-            this.pb9.Click += new System.EventHandler(this.pb_Click);
+            this.pb9.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb8
             // 
@@ -345,7 +345,7 @@
             this.pb8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb8.TabIndex = 7;
             this.pb8.TabStop = false;
-            this.pb8.Click += new System.EventHandler(this.pb_Click);
+            this.pb8.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb6
             // 
@@ -357,7 +357,7 @@
             this.pb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb6.TabIndex = 6;
             this.pb6.TabStop = false;
-            this.pb6.Click += new System.EventHandler(this.pb_Click);
+            this.pb6.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb7
             // 
@@ -369,7 +369,7 @@
             this.pb7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb7.TabIndex = 5;
             this.pb7.TabStop = false;
-            this.pb7.Click += new System.EventHandler(this.pb_Click);
+            this.pb7.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb5
             // 
@@ -381,7 +381,7 @@
             this.pb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb5.TabIndex = 4;
             this.pb5.TabStop = false;
-            this.pb5.Click += new System.EventHandler(this.pb_Click);
+            this.pb5.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb4
             // 
@@ -393,7 +393,7 @@
             this.pb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb4.TabIndex = 3;
             this.pb4.TabStop = false;
-            this.pb4.Click += new System.EventHandler(this.pb_Click);
+            this.pb4.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb2
             // 
@@ -405,7 +405,7 @@
             this.pb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb2.TabIndex = 2;
             this.pb2.TabStop = false;
-            this.pb2.Click += new System.EventHandler(this.pb_Click);
+            this.pb2.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb3
             // 
@@ -417,7 +417,7 @@
             this.pb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb3.TabIndex = 1;
             this.pb3.TabStop = false;
-            this.pb3.Click += new System.EventHandler(this.pb_Click);
+            this.pb3.Click += new System.EventHandler(this.Pb_Click);
             // 
             // pb1
             // 
@@ -429,7 +429,7 @@
             this.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb1.TabIndex = 0;
             this.pb1.TabStop = false;
-            this.pb1.Click += new System.EventHandler(this.pb_Click);
+            this.pb1.Click += new System.EventHandler(this.Pb_Click);
             // 
             // btnStart
             // 
@@ -442,7 +442,7 @@
             this.btnStart.TabIndex = 14;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
             // 
             // btnReset
             // 
@@ -455,7 +455,7 @@
             this.btnReset.TabIndex = 15;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // btnShowPictures
             // 
@@ -468,12 +468,12 @@
             this.btnShowPictures.TabIndex = 16;
             this.btnShowPictures.Text = "Show Pictures (Optional)";
             this.btnShowPictures.UseVisualStyleBackColor = false;
-            this.btnShowPictures.Click += new System.EventHandler(this.btnShowPictures_Click);
+            this.btnShowPictures.Click += new System.EventHandler(this.BtnShowPictures_Click);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // Form1
             // 
