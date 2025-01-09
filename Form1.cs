@@ -10,12 +10,12 @@ namespace MemoryGame
     public partial class Form1 : Form
     {
         private int totalTimeInSeconds, interval;
-        private clsGame.enPictureSet pictureSet;
+        private ClsGame.PictureSet pictureSet;
         private bool _isFirstClick;
         private string _currentTag;
         private PictureBox _Pb1, _Pb2;
         private List<PictureBox> pictureBoxes;
-        private clsGame Game;
+        private ClsGame Game;
         public Form1()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace MemoryGame
             _isFirstClick = true;
             _Pb1 = null;
             _Pb2 = null;
-            Game = new clsGame(pictureBoxes, pictureSet);
+            Game = new ClsGame(pictureBoxes, pictureSet);
             pbScore.Maximum = 6;
         }
 
@@ -131,11 +131,11 @@ namespace MemoryGame
         {
             if (cbPicSet.Enabled == true)
             {
-                pictureSet = cbPicSet.Text == "Animals" ? clsGame.enPictureSet.Animals :
-                    cbPicSet.Text == "Food" ? clsGame.enPictureSet.Food :
-                    clsGame.enPictureSet.Cars;
+                pictureSet = cbPicSet.Text == "Animals" ? ClsGame.PictureSet.Animals :
+                    cbPicSet.Text == "Food" ? ClsGame.PictureSet.Food :
+                    ClsGame.PictureSet.Cars;
                 FillPictureBoxes();
-                Game = new clsGame(pictureBoxes, pictureSet);
+                Game = new ClsGame(pictureBoxes, pictureSet);
                 Game.ChangePictureSet(pictureSet);
             }
         }

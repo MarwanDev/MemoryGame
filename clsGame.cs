@@ -2,26 +2,22 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static MemoryGame.clsGame;
 
 namespace MemoryGame
 {
-    internal class clsGame
+    internal class ClsGame
     {
-        private byte _Time;
-        private byte _Speed;
-        public enum enPictureSet
+        private readonly byte _Time;
+        private readonly byte _Speed;
+        public enum PictureSet
         {
             Animals,
             Cars,
             Food
         }
-        private enPictureSet _PictureSet;
+        private PictureSet _PictureSet;
         private List<PictureBox> _PictureBoxes;
         private byte _Moves;
         private decimal _SuccessfulMoves;
@@ -30,7 +26,7 @@ namespace MemoryGame
         {
             switch (_PictureSet)
             {
-                case enPictureSet.Animals:
+                case PictureSet.Animals:
                     Images = new List<Image>
                 {
                     Resources.lion,
@@ -41,7 +37,7 @@ namespace MemoryGame
                     Resources.eyeglases
                 };
                     break;
-                case enPictureSet.Cars:
+                case PictureSet.Cars:
                     Images = new List<Image>
                 {
                     Resources.red_car,
@@ -66,7 +62,7 @@ namespace MemoryGame
             }
         }
 
-        public void ChangePictureSet(enPictureSet pictureSet)
+        public void ChangePictureSet(PictureSet pictureSet)
         {
             _PictureSet = pictureSet;
             FillImagesList(ref _Images);
@@ -79,9 +75,9 @@ namespace MemoryGame
             _PictureBoxes = pictureBoxes;
         }
 
-        public clsGame(
+        public ClsGame(
             List<PictureBox> pictureBoxes,
-            enPictureSet pictureSet = enPictureSet.Animals,
+            PictureSet pictureSet = PictureSet.Animals,
             byte time = 1,
             byte speed = 1
         )
