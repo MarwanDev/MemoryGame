@@ -43,6 +43,8 @@ namespace MemoryGame
         private void Form1_Load(object sender, EventArgs e)
         {
             InitiateGame();
+            MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void ChangeMode(Mode mode)
