@@ -19,9 +19,9 @@ namespace MemoryGame
         public Form1()
         {
             InitializeComponent();
-            cbTimer.Text = "1";
-            cbSpeed.Text = "1";
-            cbPicSet.Text = "Animals";
+            cbTimer.Text = Settings.Default.Time.ToString();
+            cbSpeed.Text = Settings.Default.Speed.ToString();
+            cbPicSet.Text = Settings.Default.PictureSet;
         }
 
         enum Mode { Light, Dark };
@@ -115,7 +115,11 @@ namespace MemoryGame
         private void CbSpeed_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbSpeed.Enabled == true)
+            {
                 ChangeSpeed();
+                Settings.Default.Speed = float.Parse(cbSpeed.Text);
+                Settings.Default.Save();
+            }
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
@@ -143,6 +147,8 @@ namespace MemoryGame
                 FillPictureBoxes();
                 Game = new ClsGame(pictureBoxes, pictureSet);
                 Game.ChangePictureSet(pictureSet);
+                Settings.Default.PictureSet = cbPicSet.Text;
+                Settings.Default.Save();
             }
         }
 
@@ -298,6 +304,8 @@ namespace MemoryGame
             if (cbTimer.Enabled == true)
             {
                 ChangeTime();
+                Settings.Default.Time = Convert.ToByte(cbTimer.Text);
+                Settings.Default.Save();
             }
         }
     }

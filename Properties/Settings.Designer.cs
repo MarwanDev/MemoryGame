@@ -34,5 +34,41 @@ namespace MemoryGame.Properties {
                 this["LightMode"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Animals")]
+        public string PictureSet {
+            get {
+                return ((string)(this["PictureSet"]));
+            }
+            set {
+                this["PictureSet"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public byte Time {
+            get {
+                return ((byte)(this["Time"]));
+            }
+            set {
+                this["Time"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public float Speed {
+            get {
+                return ((float)(this["Speed"]));
+            }
+            set {
+                this["Speed"] = value;
+            }
+        }
     }
 }
