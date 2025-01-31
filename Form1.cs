@@ -45,6 +45,8 @@ namespace MemoryGame
             InitiateGame();
             MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            rdLight.Checked = Settings.Default.LightMode;
+            rdDark.Checked = !Settings.Default.LightMode;
         }
 
         private void ChangeMode(Mode mode)
@@ -54,6 +56,8 @@ namespace MemoryGame
             {
                 pictureBox.BackColor = mode == Mode.Light ? this.BackColor : Color.Gray;
             }
+            Settings.Default.LightMode = mode == Mode.Light;
+            Settings.Default.Save();
         }
 
         private void RdCheckedChanged(object sender, EventArgs e)
